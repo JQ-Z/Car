@@ -13,10 +13,11 @@ int main()
 			// cout << "   arr[" << i << "]" << "[" << j-1 << "]=" << arr[i][j-1];
 			// arr[i][j] = arr[i-1][j] + arr[i][j-1];
 			// cout << "   arr[" << i << "]" << "[" << j << "]=" << arr[i][j] << endl;
-			if(j != 0 && j == i) continue;
-			if(j != 0 && j + 10 == i) continue;
-			if(i - 1 > 0 ) arr[i][j] += arr[i-1][j];
-			if(j - 1 > 0 ) arr[i][j] += arr[i][j-1];
+			if(j == i) continue;
+			if(20 - i == 10 - j) continue;
+			if(i - 1 >= 0 ) arr[i][j] += arr[i-1][j];
+			if(j - 1 >= 0 ) arr[i][j] += arr[i][j-1];
+			//cout << i << ":" <<  j << "=" << arr[i][j] << endl;
 		}
 	cout << arr[20][9] + arr[19][10] << endl;
 	return 0;
